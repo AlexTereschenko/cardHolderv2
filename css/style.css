@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  overflow: hidden;
+  margin: 0;
+  background-color: #212121;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 1128px;
+  display: flex;
+  gap: 24px;
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+}
+
+.slide {
+  height: 800px;
+  width: 72px;
+  border-radius: 15px;
+  cursor: pointer;
+  color: #fff;
+  position: relative;
+  transition: width 500ms ease-in-out;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 24px #212121;
+}
+
+.cardInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 40px 20px;
+    font-weight: 600;
+    font-size: 22px;
+    width: 72px;
+    position: absolute;
+    right: 0;
+}
+
+.cardHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+    border-top: 4px solid #fff;
+    width: 32px;
+    gap: 40px;
+    position: relative;
+}
+
+.cardInfo p {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-weight: 400;
+}
+
+.slide.active {
+    width: 552px;
+}
+
+.slide.active .cardContent {
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin-top: 40px;
+    transition: opacity 500ms ease-in-out;
+}
+
+.cardContent {
+    opacity: 0;
+}
+
+.cardContent p {
+    text-align: center;
+    max-width: 360px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 120%;
+}
+
+.cardContent img {
+    max-width: 666px;
+}
+
+.slide.active:nth-child(2) .cardContent img {
+    position: absolute;
+    left: 27px;
+    top: 127px;
+}
